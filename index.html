@@ -331,7 +331,7 @@
     }
 
     .product-logo {
-      width: 172px;
+      width: 300px;
       margin-bottom: 28px;
       filter: drop-shadow(0 12px 22px rgba(39, 50, 33, 0.18));
     }
@@ -920,7 +920,7 @@
       margin: 0 auto;
       padding: 28px 0;
       border-top: 1px solid rgba(247, 237, 205, 0.14);
-      color: rgba(247, 237, 205, 0.64);
+      color: rgba(0, 0, 0, 0.64);
       font-size: 0.92rem;
     }
 
@@ -1027,7 +1027,7 @@
       }
 
       .product-logo {
-        width: 132px;
+        width: 232px;
         margin-bottom: 18px;
       }
 
@@ -1102,9 +1102,19 @@
       }
 
       .aroma-track {
-        width: auto;
+        width: auto !important;
         display: grid;
         padding: 0 20px;
+        gap: 18px;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+      }
+
+      .gsap-ready .aroma-track {
+        width: auto !important;
+        overflow: visible !important;
+        display: grid !important;
+        scroll-snap-type: none !important;
       }
 
       .aroma-panel {
@@ -1114,7 +1124,7 @@
       }
 
       .aroma-media {
-        min-height: 420px;
+        min-height: 320px;
       }
 
       .aroma-copy {
@@ -1239,9 +1249,9 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-copy">
-          <img class="product-logo reveal" src="Atleli Ags/atleli_LOGO.png" alt="Logo ATLELI" />
+
           <p class="eyebrow reveal">Atelier Skin & Body Care presenta</p>
-          <h1 id="hero-title" class="reveal">ATLELI</h1>
+          <img class="product-logo reveal" src="Atleli Ags/atleli_LOGO.png" alt="Logo ATLELI" />
           <p class="reveal">Spray antibacterial de 50 ml para manos limpias, protegidas y suaves, con una experiencia sensorial de menta o lavanda en cada aplicacion.</p>
           <div class="hero-actions reveal">
             <a class="btn btn-primary" href="https://wa.me/524493090400" target="_blank" rel="noreferrer">Pedir por WhatsApp</a>
@@ -1269,7 +1279,7 @@
     <section class="section intro" id="producto">
       <div class="section-inner intro-grid">
         <div class="intro-title">
-          <span class="script reveal">Leave your spark.</span>
+          <span class="script reveal">Leave your spark</span>
           <h2 class="reveal">Cuidado que se siente personal.</h2>
         </div>
         <div class="intro-copy">
@@ -1360,7 +1370,6 @@
       <div class="section-inner ritual-grid">
         <div class="ritual-visual reveal">
           <video src="Atleli Ags/WhatsApp Video 2026-07-01 at 00.14.06.mp4" autoplay muted loop playsinline poster="Atleli Ags/Atleli .jpeg"></video>
-          <img class="floating-logo" src="Atleli Ags/atleli_LOGO.png" alt="" aria-hidden="true" />
         </div>
         <div>
           <p class="eyebrow reveal">Modo de uso</p>
@@ -1475,11 +1484,6 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <img src="LOGO PNG/ATELIER_LOGO-05.png" alt="Atelier Skin & Body Care" />
-    <span>ATLELI | Spray antibacterial 50 ml</span>
-    <span>Brand Book 2026</span>
-  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
