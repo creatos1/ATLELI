@@ -47,6 +47,7 @@
       color: var(--ink);
       font-family: "Optima Local", Optima, Candara, "Segoe UI", sans-serif;
       overflow-x: hidden;
+      overflow-wrap: break-word;
     }
 
     body.is-locked {
@@ -91,9 +92,8 @@
       align-items: center;
       justify-content: center;
       padding: 0 28px;
-      background: rgba(251, 247, 233, 0.82);
+      background: #ffffff;
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(18px);
     }
 
     .nav-shell {
@@ -279,12 +279,10 @@
 
     .hero {
       position: relative;
-      min-height: 620px;
-      height: calc(100svh - 56px);
+      min-height: max(620px, calc(100svh - 56px));
       display: flex;
       align-items: stretch;
-      padding: var(--nav-h) 28px 0;
-      overflow: hidden;
+      padding: var(--nav-h) 28px 32px;
       isolation: isolate;
       background-image: url("../Atleli Ags/WhatsApp Image 2026-07-01 at 00.03.57.jpeg");
       background-size: cover;
@@ -370,6 +368,33 @@
     .btn-secondary {
       background: rgba(255, 253, 245, 0.58);
       color: var(--deep);
+    }
+
+    .inline-link {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      gap: 6px;
+      margin-top: 18px;
+      color: var(--granite);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .detail-card.link-card {
+      display: block;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .detail-card.link-card:hover,
+    .detail-card.link-card:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 44px rgba(39, 50, 33, 0.12);
+    }
+
+    .detail-card.link-card .inline-link {
+      margin-top: 14px;
     }
 
     .hero-stage {
@@ -902,6 +927,18 @@
       border-radius: 8px;
       color: var(--cream);
       font-size: 0.92rem;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .social-row a:hover,
+    .social-row a:focus-visible {
+      background: rgba(247, 237, 205, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .social-row svg {
+      width: 19px;
+      height: 19px;
     }
 
     .footer {
@@ -1002,9 +1039,8 @@
       }
 
       .hero {
-        min-height: 600px;
-        height: calc(100svh - 44px);
-        padding: var(--nav-h) 20px 0;
+        min-height: max(600px, calc(100svh - 44px));
+        padding: var(--nav-h) 20px 32px;
         background-position: 58% center;
       }
 
